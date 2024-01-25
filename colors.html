@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      padding: 10px 25px;
+      border-radius: 10px;
+      border: none;
+      background-color: rgb(48, 33, 61);
+      color: #fff;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <button id="btn">Colors</button>
+  </main>
+
+  <script>
+    let button = document.getElementById('btn');
+    let main = document.querySelectorAll('.main');
+    let count = 0;
+    let colors = ['blue', 'orange', 'pink', 'black'];
+
+    button.addEventListener('click', () => {
+      main[0].style.backgroundColor = colors[count++];
+      if (count > colors.length - 1) {
+        count = 0;
+      }
+    })
+
+  </script>
+</body>
+
+</html>
